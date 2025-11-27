@@ -1,4 +1,3 @@
-/* ai heeft wat info bij gezet toen vroeg kleuren te veranderen als meer nodig is zeg ff */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -104,7 +103,6 @@ nav ul.menu>li:hover>a {
     text-shadow: 0 0 10px #00aaff;
     border: 1px solid #00aaff;
     border-radius: 4px;
-    /* Blue background-color */
     background-color: rgba(0, 170, 255, 0.1);
 }
 
