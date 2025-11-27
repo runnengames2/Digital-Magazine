@@ -1,38 +1,54 @@
-/* ai heeft wat info bij gezet toen vroeg kleuren te veranderen als meer nodig is zeg ff */
+/*
+    style.css
+    - Dit bestand bevat de globale styling voor de Digital Magazine site.
+    - Onderstaande commentaren (Nederlands) leggen per sectie uit wat die regels doen.
+    - Pas kleuren of lettertypes aan in de corresponderende blokken.
+*/
+
+/* --- Universele reset / basisregels ---
+     - Zorgt dat box-sizing consistent is (padding en border inbegrepen)
+     - Verwijdert standaard margins/paddings die browsers toevoegen
+*/
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+        box-sizing: border-box; /* berekent breedte/hoogte inclusief padding/border */
+        margin: 0;              /* reset standaard marge */
+        padding: 0;             /* reset standaard padding */
 }
 
 body {
-    font-family: 'Orbitron', sans-serif;
-    background-color: #0d0d0d;
-    color: #fff;
-    overflow-x: hidden;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    /* Body: globale typografie en achtergrond */
+    font-family: 'Orbitron', sans-serif; /* hoofdlettertype; valt terug op sans-serif */
+    background-color: #0d0d0d;           /* donkere achtergrond voor het thema */
+    color: #fff;                         /* standaard tekstkleur */
+    overflow-x: hidden;                  /* voorkomt horizontaal scrollen bij animaties */
+    min-height: 100vh;                   /* zorgt dat body altijd minimaal het schermhoogte beslaat */
+    display: flex;                       /* maakt een flex-container zodat footer 'naar beneden geduwd' wordt */
+    flex-direction: column;              /* verticale layout: header - main - footer */
 }
 
 main {
-    flex-grow: 1;
-    padding: 50px 20px;
-    text-align: center;
+    /* Main: inhoudsvak dat uitzet en ruimte inneemt tussen header en footer */
+    flex-grow: 1;           /* neemt resterende verticale ruimte in */
+    padding: 50px 20px;     /* binnenruimte rondom de hoofdinhoud */
+    text-align: center;     /* centreert tekst in hero/main secties */
 }
 
 header {
-    background: linear-gradient(90deg, #000, #00001a);
-    border-bottom: 2px solid #00aaff;
-    color: #00aaff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 40px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 0 15px rgba(0, 170, 255, 0.4);
+    /* Header: navigatiebalk en merkgebied
+       - sticky: blijft bovenaan staan bij scrollen
+       - flex: verdeelt logo en navigatie over de breedte
+    */
+    background: linear-gradient(90deg, #000, #00001a); /* subtiele gradient */
+    border-bottom: 2px solid #00aaff;                 /* zichtbare scheidingslijn in merkkleur */
+    color: #00aaff;                                   /* kleuraccent voor tekst in header */
+    display: flex;                                    /* horizontale layout voor logo + nav */
+    align-items: center;                              /* verticaal centreren */
+    justify-content: space-between;                  /* ruimte tussen logo en nav */
+    padding: 12px 40px;                               /* interne marges header */
+    position: sticky;                                 /* 'plakt' aan top tijdens scrollen */
+    top: 0;                                           /* positie: bovenkant viewport */
+    z-index: 1000;                                    /* boven andere elementen tonen */
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.4);      /* licht neon-glow effect */
 }
 
 header .nav-logo {
@@ -72,9 +88,19 @@ header h1 {
 }
 
 nav {
+    /* Navigatie-container
+       - `flex-shrink: 0` voorkomt dat de navigatie krimpt wanneer er weinig ruimte is
+       - Bevat de hoofdmenu-lijst(en) en is het ankerpunt voor mobiele menu-logica
+    */
     flex-shrink: 0;
 }
 
+/* Hoofd menu (ul.menu)
+   - `list-style: none` verwijdert bullets
+   - `display: flex` toont menu-items horizontaal op grotere schermen
+   - `gap` regelt de ruimte tussen de items
+   - Op mobiel wordt dit via media queries naar een kolom-layout veranderd
+*/
 nav ul.menu {
     list-style: none;
     display: flex;
@@ -83,11 +109,19 @@ nav ul.menu {
     padding: 0;
 }
 
+/* Individueel menu-item (li)
+   - `position: relative` maakt het mogelijk om absolute child-elementen (bv. dropdowns) te positioneren
+   - `display: inline-block` behoudt inline gedrag maar ondersteunt padding/border
+*/
 nav ul.menu>li {
     position: relative;
     display: inline-block;
 }
 
+/* Link-styling voor menu-items
+   - Border is initieel transparant zodat hover-border geen layout-shift veroorzaakt
+   - Transition maakt hover effecten vloeiend
+*/
 nav ul.menu>li>a {
     text-decoration: none;
     color: #f0f0f0;
@@ -108,6 +142,10 @@ nav ul.menu>li:hover>a {
     background-color: rgba(0, 170, 255, 0.1);
 }
 
+/* Footer sectie: merk, links en kleine lettertjes
+   - De footer gebruikt dezelfde merkkleur en glow voor consistentie
+   - `margin-top: auto` zorgt dat de footer onderaan de pagina blijft bij flex layout
+*/
 footer {
     background: linear-gradient(180deg, #00000a, #000);
     color: #fff;
@@ -164,6 +202,10 @@ footer {
 }
 
 
+/* Hero sectie: bovenste content blok (grote afbeelding + titel/intro)
+   - `.hero-section` centreert inhoud verticaal en horizontaal
+   - `.hero-image-placeholder` is een visuele container voor hero-afbeeldingen/animaties
+*/
 .hero-section {
     display: flex;
     flex-direction: column;
@@ -244,6 +286,11 @@ footer {
     }
 }
 
+/* Animatie: red-blue-flash
+   - Wisselt tekstkleur tussen twee blauwtinten
+   - `steps(2, start)` geeft een staccato (niet vloeiende) overgang voor retro/neon look
+*/
+
 .red-blue-flash-text {
     position: relative;
     z-index: 2;
@@ -255,6 +302,11 @@ footer {
     animation: red-blue-flash 3.3s steps(2, start) infinite;
 }
 
+/* Hero content: titels en paragrafen binnen de hero
+   - Gebruik de accentkleur voor belangrijke koppen
+   - Beperk paragraaf-breedte voor goede leesbaarheid
+*/
+
 
 .hero-content h2 {
     color: #00aaff;
@@ -262,7 +314,15 @@ footer {
     margin-bottom: 15px;
     font-size: 2.5rem;
 }
+.hero-content p {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
 
+/* Paragraaf in hero: kleinere, goed leesbare tekst */
 .hero-content p {
     max-width: 800px;
     margin: 0 auto 40px auto;
@@ -279,6 +339,11 @@ footer {
     padding: 0 20px;
 }
 
+/* Feature cards: overzichtsblokken voor features of links
+   - Flex zorgt voor rij-opstelling op breed scherm
+   - flex-wrap en gap zorgen dat cards netjes naar de volgende regel springen op kleine schermen
+*/
+
 .card {
     background: linear-gradient(145deg, #00001a, #000);
     border: 2px solid #00aaff;
@@ -291,11 +356,24 @@ footer {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* Individuele kaart (card)
+   - max-width beperkt de kaart tot een nette breedte
+   - box-shadow en border geven het neon/glas-achtige uiterlijk
+   - transition maakt de hover lift soepel
+*/
+
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(0, 170, 255, 0.7);
 }
+.card i {
+    font-size: 3rem;
+    color: #00aaff;
+    text-shadow: 0 0 10px #00aaff;
+    margin-bottom: 15px;
+}
 
+/* Icon en typografie binnen kaart */
 .card i {
     font-size: 3rem;
     color: #00aaff;
@@ -315,6 +393,11 @@ footer {
     color: #aaa;
     line-height: 1.5;
 }
+
+/* Responsive rules overzicht
+   - Eerste media query (1200px) voor lichte aanpassingen op middelgrote schermen
+   - Tweede media query (768px) schakelt naar mobiele navigatie en stacked layout
+*/
 
 
 @media (max-width: 1200px) {
@@ -391,3 +474,8 @@ footer {
         max-width: 90%;
     }
 }
+
+/* Animatie: border-color-cycle-rgb
+    - Wisselt randkleur en schaduw via keyframes voor een doorlopende neon-cycling
+    - Wordt gebruikt op `.hero-image-placeholder` zodat de rand en glow van kleur veranderen
+*/
