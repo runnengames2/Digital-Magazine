@@ -2,11 +2,82 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>...</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <style>
+    </style>
+    <title>Mobile - Test</title>
 </head>
+
 <body>
-    
+
+    <header>
+        <div class="nav-logo">
+            <img src="logo.png" alt="ANDS Network Logo" />
+            <h1>A Site</h1>
+        </div>
+
+        <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav>
+            <ul class="menu" id="primary-navigation" data-visible="false">
+                <li><a href="smt.html">Tutorial</a></li>
+                <li><a href="smt2.html">Nieuws</a></li>
+                <li><a href="smt3.html">Opinie</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <!-- vul julie inhoud hier in -->
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="logo.png" alt="ANDS Network Logo">
+            <p class="brand">A Site</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Telegram</a>
+            <a href="#">Whatsapp</a>
+            <a href="#">Youtube</a>
+            <a href="#">Discord</a>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 A Site | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const primaryNavigation = document.querySelector('#primary-navigation');
+
+            menuToggle.addEventListener('click', () => {
+                const visibility = primaryNavigation.getAttribute('data-visible') === 'false';
+
+                primaryNavigation.setAttribute('data-visible', visibility);
+                menuToggle.setAttribute('aria-expanded', visibility);
+
+                const icon = menuToggle.querySelector('i');
+                if (visibility) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+    </script>
 </body>
+
+</html>
