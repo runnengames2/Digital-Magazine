@@ -16,18 +16,18 @@
 
 <body>
 
-    <header>
-        <div class="nav-logo">
-            <img src="logo.png" alt="ANDS Network Logo" />
+    <header class="main-header">
+        <div class="header-logo-group">
+            <img src="logo.jpg" alt="ANDS Network Logo" />
             <h1>A Site</h1>
         </div>
 
-        <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false">
+        <button class="mobile-menu-toggle-button" aria-controls="primary-navigation" aria-expanded="false">
             <i class="fas fa-bars"></i>
         </button>
 
-        <nav>
-            <ul class="menu" id="primary-navigation" data-visible="false">
+        <nav class="site-navigation">
+            <ul class="nav-links-list" id="primary-navigation" data-visible="false">
                 <li><a href="smt.html">Tutorial</a></li>
                 <li><a href="smt2.html">Nieuws</a></li>
                 <li><a href="smt3.html">Opinie</a></li>
@@ -36,29 +36,29 @@
 
     </header>
 
-    <main>
-        <!-- vul julie inhoud hier in -->
+    <main class="page-content">
+        <!-- content here guys -->
     </main>
 
-    <footer>
-        <div class="footer-logo">
-            <img src="logo.png" alt="ANDS Network Logo">
-            <p class="brand">A Site</p>
+    <footer class="site-footer">
+        <div class="footer-brand-logo">
+            <img src="logo.jpg" alt="ANDS Network Logo">
+            <p class="brand-name">A Site</p>
         </div>
-        <div class="footer-links">
+        <div class="footer-social-links">
             <a href="#">Telegram</a>
             <a href="#">Whatsapp</a>
             <a href="#">Youtube</a>
             <a href="#">Discord</a>
         </div>
-        <div class="footer-bottom">
+        <div class="footer-copyright">
             <p>© 2025 A Site | All Rights Reserved</p>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const menuToggle = document.querySelector('.menu-toggle');
+            const menuToggle = document.querySelector('.mobile-menu-toggle-button');
             const primaryNavigation = document.querySelector('#primary-navigation');
 
             menuToggle.addEventListener('click', () => {
