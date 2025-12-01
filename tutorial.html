@@ -1,12 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial</title>
+    <title>Tutorial: Variabelen in Python</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Tutorial over variabelen in Python voor beginners">
 </head>
+
 <body>
-    
+
+    <header class="main-header">
+        <div class="header-logo-group">
+            <img src="https://via.placeholder.com/80" alt="A Site logo placeholder">
+            <h1>A Site — Tutorial</h1>
+        </div>
+
+        <button class="mobile-menu-toggle-button" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="menu-icon" aria-hidden="true">☰</span>
+        </button>
+
+        <nav class="site-navigation" aria-label="Hoofdnavigatie">
+            <ul class="nav-links-list" id="primary-navigation" data-visible="false">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tutorial.html" aria-current="page">Tutorial</a></li>
+                <li><a href="opinipagina.html">Opinie</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content" id="maincontent">
+
+        <section class="hero-section">
+            <div class="hero-image-container" aria-hidden="true"></div>
+            <div class="hero-content">
+                <h2>🐍 Tutorial: Variabelen in Python — De Complete Beginnersgids</h2>
+                <p>
+                    Welkom bij deze stap-voor-stap tutorial over variabelen in Python. Deze gids is speciaal
+                    geschreven voor absolute beginners en geschikt om op een website te publiceren. Je hebt
+                    geen programmeerervaring nodig. We beginnen bij nul en eindigen met jouw eerste werkende
+                    Python-programma met variabelen.
+                </p>
+            </div>
+        </section>
+
+        <section class="feature-cards-container" aria-labelledby="eindresultaat">
+            <article class="feature-card">
+                <h3 id="eindresultaat">🎯 Eindresultaat</h3>
+                <p>Aan het einde van deze uitleg kun jij:</p>
+                <ul>
+                    <li>Uitleggen wat een variabele is</li>
+                    <li>Zelf variabelen maken in Python</li>
+                    <li>Variabelen lezen, wijzigen en gebruiken</li>
+                    <li>Kleine programma’s schrijven die informatie opslaan en tonen</li>
+                </ul>
+            </article>
+
+            <article class="feature-card">
+                <h3 id="wat-is-variabele">🧩 Wat is een variabele?</h3>
+                <p>Een variabele kun je zien als een doosje met een label eraan: de naam is het label, de inhoud is de waarde.</p>
+                <pre><code>naam = "Sam"
+leeftijd = 12</code></pre>
+            </article>
+
+            <article class="feature-card">
+                <h3>⚙️ Wat heb je nodig?</h3>
+                <p>Je hebt Python op je computer, of een online editor zoals Replit of Google Colab.</p>
+            </article>
+        </section>
+
+        <section class="feature-cards-container" aria-label="Stappen">
+            <article class="feature-card" id="stap1" aria-labelledby="stap1-heading">
+                <h3 id="stap1-heading">🧭 Stap 1 — Je eerste variabele maken</h3>
+                <pre><code>naam = "Sam"</code></pre>
+                <p>Je maakt een variabele genaamd <code>naam</code> en stopt er de tekst <code>"Sam"</code> in.</p>
+            </article>
+
+            <article class="feature-card" id="stap2" aria-labelledby="stap2-heading">
+                <h3 id="stap2-heading">🧭 Stap 2 — Meerdere variabelen maken</h3>
+                <pre><code>naam = "Sam"
+leeftijd = 12
+favoriete_kleur = "blauw"</code></pre>
+                <p>Variabelen mogen geen spaties bevatten; gebruik underscores. Begin niet met een cijfer.</p>
+            </article>
+
+            <article class="feature-card" id="stap3" aria-labelledby="stap3-heading">
+                <h3 id="stap3-heading">🧭 Stap 3 — Variabelen tonen</h3>
+                <pre><code>print(naam)
+print(leeftijd)</code></pre>
+                <p>Gebruik <code>print()</code> om waarden zichtbaar te maken voor de gebruiker.</p>
+            </article>
+
+            <article class="feature-card" id="stap4" aria-labelledby="stap4-heading">
+                <h3 id="stap4-heading">🧭 Stap 4 — Variabelen combineren</h3>
+                <pre><code>print("Hallo, ik ben", <br>naam, "en ik ben", leeftijd, "jaar oud.")</code></pre>
+                <p>Combineer tekst en variabelen in één regel met <code>print()</code>.</p>
+            </article>
+
+            <article class="feature-card" id="stap5" aria-labelledby="stap5-heading">
+                <h3 id="stap5-heading">🧭 Stap 5 — Waarde veranderen</h3>
+                <pre><code>score = 0
+print(score)
+
+score = 10
+print(score)</code></pre>
+                <p>Variabelen zijn veranderlijk — je kunt ze opnieuw toewijzen tijdens de uitvoering.</p>
+            </article>
+
+            <article class="feature-card" id="stap6" aria-labelledby="stap6-heading">
+                <h3 id="stap6-heading">🧮 Stap 6 — Rekenen met variabelen</h3>
+                <pre><code>a = 5
+b = 3
+som = a + b
+print(som)</code></pre>
+                <p>Je kunt rekenkundige bewerkingen uitvoeren en het resultaat in variabelen bewaren.</p>
+            </article>
+
+            <article class="feature-card" id="mini-project" aria-labelledby="mini-project-heading">
+                <h3 id="mini-project-heading">🏁 Mini-project: Bouw je eigen profielprogramma</h3>
+                <pre><code>naam = "Alex"
+leeftijd = 14
+hobby = "gamen"
+woonplaats = "Rotterdam"
+
+print("=== MIJN PROFIEL ===")
+print("Naam:", naam)
+print("Leeftijd:", leeftijd)
+print("Hobby:", hobby)
+print("Woonplaats:", woonplaats)</code></pre>
+                <p>Samenvoegen van eerdere stappen tot een klein programma dat informatie toont.</p>
+            </article>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-brand-logo">
+            <img src="https://via.placeholder.com/80" alt="A Site logo placeholder">
+            <div class="brand-name">A Site</div>
+        </div>
+        <div class="footer-social-links">
+            <a href="#">Telegram</a>
+            <a href="#">Whatsapp</a>
+            <a href="#">Youtube</a>
+            <a href="#">Discord</a>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2025 A Site | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.mobile-menu-toggle-button');
+            const primaryNavigation = document.querySelector('#primary-navigation');
+
+            if (!menuToggle || !primaryNavigation) return;
+
+            menuToggle.addEventListener('click', () => {
+                const currentlyHidden = primaryNavigation.getAttribute('data-visible') === 'false';
+                const newValue = currentlyHidden ? 'true' : 'false';
+
+                primaryNavigation.setAttribute('data-visible', newValue);
+                menuToggle.setAttribute('aria-expanded', newValue);
+
+                const icon = menuToggle.querySelector('.menu-icon');
+                if (icon) icon.textContent = currentlyHidden ? '×' : '☰';
+            });
+        });
+    </script>
+
 </body>
+</html>
