@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>TutorialPagina — A Site</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>TutorialPagina - Mark</title>
 </head>
 <body>
 <header class="main-header">
     <div class="header-logo-group">
-        <img src="https://via.placeholder.com/80" alt="A Site logo placeholder">
-        <h1>A Site</h1>
+        <img src="" alt="TECHNOVA">
+        <h1>Mark</h1>
     </div>
     <button class="mobile-menu-toggle-button" aria-controls="primary-navigation" aria-expanded="false">
         <i class="fas fa-bars"></i>
@@ -29,49 +29,80 @@
 <main class="page-content">
     <section class="hero-section">
         <div class="hero-image-container">
-            <img src="https://via.placeholder.com/1200x400" alt="Tutorial Hero">
+            <img src="https://via.placeholder.com/1200x400" alt="Ja dis leuke plek voor titel: Tutorial">
         </div>
         <div class="hero-content">
-            <h2>Onderwerp: Variabelen</h2>
-            <p>Leer stap voor stap hoe je variabelen kunt gebruiken in programmeertalen.</p>
+            <h2>Stap-voor-stap Tutorial: Je eerste softwareprogramma maken</h2>
+            <p>Deze tutorial is bedoeld voor beginnende studenten van het Technova College Ede. Je leert hoe je een eenvoudig softwareprogramma schrijft en begrijpt hoe de code werkt en waarom elke stap nodig is.</p>
         </div>
     </section>
 
     <section class="feature-cards-container">
         <div class="feature-card">
-            <h3>Wat moet er gebeuren</h3>
-            <ul>
-                <li>Het onderwerp moet bepaald worden</li>
-                <li>Er moet een prompt voor de AI gemaakt worden</li>
-                <li>Het eindresultaat moet minimaal 600 woorden zijn</li>
-                <li>De tutorial moet stap voor stap worden uitgelegd</li>
-            </ul>
+            <h3>Stap 1: Wat is het eindresultaat?</h3>
+            <p>Het eindresultaat is een eenvoudig programma dat de gebruiker begroet en een berekening uitvoert. Bijvoorbeeld: het programma vraagt je naam en leeftijd, zegt hallo tegen je en berekent hoe oud je over 5 jaar bent. Dit geeft je een praktisch resultaat dat direct zichtbaar is.</p>
         </div>
+
         <div class="feature-card">
-            <h3>De tutorial bevat</h3>
-            <ul>
-                <li>Wat het eindresultaat is</li>
-                <li>Welke stappen er nodig zijn om daar te komen</li>
-                <li>Wat de code doet</li>
-                <li>Waarom die code nodig is</li>
-            </ul>
+            <h3>Stap 2: Welke stappen zijn nodig?</h3>
+            <p>We doorlopen het proces stap voor stap: (1) variabelen maken voor naam en leeftijd, (2) input van de gebruiker lezen, (3) berekeningen uitvoeren, (4) resultaten tonen, en (5) het programma testen om zeker te weten dat alles werkt.</p>
         </div>
+
         <div class="feature-card">
-            <h3>Dit moet op de TutorialPagina</h3>
-            <ul>
-                <li>De AI prompt</li>
-                <li>De door AI gegenereerde tutorialtekst</li>
-                <li>Eventuele code voorbeelden</li>
-                <li>Korte reflectie wat je zelf hebt geleerd</li>
-            </ul>
+            <h3>Stap 3: Code schrijven</h3>
+            <p>Hier is een eenvoudig Python-voorbeeld:</p>
+            <pre><code># Vraag de naam van de gebruiker
+naam = input("Wat is je naam? ")
+
+# Vraag de leeftijd
+leeftijd = int(input("Hoe oud ben je? "))
+
+# Berekening uitvoeren
+leeftijd_toekomst = leeftijd + 5
+
+# Resultaat tonen
+print("Hallo " + naam + 
+"! Over 5 jaar ben je " 
++ str(leeftijd_toekomst) + " jaar oud.")</code></pre>
+            <p>Deze code vraagt informatie, slaat deze op in variabelen, doet een berekening en geeft een resultaat weer op het scherm.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Stap 4: Wat doet de code?</h3>
+            <p>Elke regel heeft een duidelijke functie: <code>input()</code> leest iets van de gebruiker, <code>int()</code> zet de tekst om in een getal, en <code>print()</code> laat het resultaat zien. Variabelen zoals <code>naam</code> en <code>leeftijd</code> slaan de gegevens tijdelijk op zodat we ze kunnen gebruiken in berekeningen.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Stap 5: Waarom deze code nodig is</h3>
+            <p>Deze code leert je de basisprincipes van programmeren: input, variabelen, berekeningen en output. Zonder deze stappen kan een programma geen nuttige resultaten geven of communiceren met de gebruiker. Dit is de kern van alle softwareontwikkeling.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Stap 6: Test en controleer</h3>
+            <p>Voer je programma uit, voer verschillende namen en leeftijden in en kijk of de berekening klopt. Dit helpt je fouten te vinden en te begrijpen hoe veranderingen in code het resultaat beïnvloeden.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Gebruikte AI-prompt</h3>
+            <p>"Schrijf een stap-voor-stap tutorial voor een beginner die nog nooit heeft geprogrammeerd. Het moet uitleggen wat het eindresultaat is, welke stappen nodig zijn, wat de code doet, en waarom de code nodig is. Gebruik een eenvoudig Python-voorbeeld en zorg dat de tekst minimaal 600 woorden is."</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>AI-gegenereerde tutorialtekst</h3>
+            <p>De bovenstaande uitleg en stappen zijn door AI gegenereerd op basis van de prompt. Het legt uit hoe beginners bij Technova College Ede een eenvoudig softwareprogramma kunnen maken en begrijpen, inclusief variabelen, berekeningen en output.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Reflectie</h3>
+            <p>Door deze tutorial te volgen, heb je als het goed is geleerd hoe belangrijk het is om de stappen van programmeren te structureren. Het begrijpen van variabelen, input, output en eenvoudige berekeningen is de basis voor alle softwareontwikkeling. Door te oefenen, wordt het makkelijker om grotere en complexere programma's te maken.</p>
         </div>
     </section>
 </main>
 
 <footer class="site-footer">
     <div class="footer-brand-logo">
-        <img src="https://via.placeholder.com/80" alt="A Site logo placeholder">
-        <p class="brand-name">A Site</p>
+        <img src="" alt="TECHNOVA">
+        <p class="brand-name">MARK</p>
     </div>
     <div class="footer-social-links">
         <a href="#">Telegram</a>
@@ -88,20 +119,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.mobile-menu-toggle-button');
     const primaryNavigation = document.querySelector('#primary-navigation');
-
     menuToggle.addEventListener('click', () => {
         const visibility = primaryNavigation.getAttribute('data-visible') === 'false';
         primaryNavigation.setAttribute('data-visible', visibility);
         menuToggle.setAttribute('aria-expanded', visibility);
-
         const icon = menuToggle.querySelector('i');
-        if (visibility) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
-        } else {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        }
+        if (visibility) { icon.classList.remove('fa-bars'); icon.classList.add('fa-times'); }
+        else { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
     });
 });
 </script>

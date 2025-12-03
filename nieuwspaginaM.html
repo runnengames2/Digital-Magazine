@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>NieuwsPagina — A Site</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>Nieuws - Mark</title>
 </head>
 <body>
 <header class="main-header">
     <div class="header-logo-group">
-        <img src="https://via.placeholder.com/80" alt="A Site logo placeholder">
-        <h1>A Site</h1>
+        <img src="" alt="TECHNOVA">
+        <h1>Mark</h1>
     </div>
     <button class="mobile-menu-toggle-button" aria-controls="primary-navigation" aria-expanded="false">
         <i class="fas fa-bars"></i>
@@ -29,46 +29,41 @@
 <main class="page-content">
     <section class="hero-section">
         <div class="hero-image-container">
-            <img src="https://via.placeholder.com/1200x400" alt="Nieuws Hero">
+            <img src="https://via.placeholder.com/1200x400" alt="Informatieve tekst over servers">
         </div>
         <div class="hero-content">
-            <h2>Onderwerp: AI</h2>
-            <p>Nieuws over AI-ontwikkeling en informatieve teksten van AI-tools en medestudenten.</p>
+            <h2>Nieuws: Kennis over Servers</h2>
+            <p>Op deze pagina vind je drie informatieve teksten over servers in softwareontwikkeling. De eerste is AI-gegenereerd, de andere twee zijn medestudenten versies (door AI want het moest wel origineel blijven maar we hebben dit nog niet echt gehad). Alle teksten geven objectieve feiten en uitleg zoals in het boekje omschreven staat :/</p>
         </div>
     </section>
 
     <section class="feature-cards-container">
-        <div class="feature-card">
-            <h3>Onze eigen Teksten</h3>
-            <ul>
-                <li>Een onderwerp dat past bij de opleiding</li>
-                <li>Formuleer een eigen prompt voor de AI</li>
-            </ul>
-        </div>
-        <div class="feature-card">
-            <h3>Wat de tekst moet hebben</h3>
-            <ul>
-                <li>Objectief zijn</li>
-                <li>Feiten bevatten</li>
-                <li>Geen mening geven</li>
-                <li>Een duidelijke structuur hebben</li>
-                <li>Eventueel meningen van anderen bevatten, met bronvermelding</li>
-            </ul>
-        </div>
-        <div class="feature-card">
-            <h3>Checklist</h3>
-            <ul>
-                <li>1 informatieve tekst door AI-tool</li>
-                <li>2 informatieve teksten van medestudenten</li>
-            </ul>
-        </div>
-    </section>
+
+    <div class="feature-card">
+        <h3>AI-tekst</h3>
+        <p><strong>Prompt:</strong> "Leg op een simpele manier uit wat een server is en hoe het werkt. Gebruik makkelijke woorden en vertel alleen feiten."</p>
+        <p><strong>Tekst:</strong><br>
+        Een server is een speciale computer die informatie geeft aan andere computers. Bijvoorbeeld websites, bestanden of e-mails. Er zijn verschillende soorten servers. Een webserver laat een website zien. Een database-server bewaart gegevens. Een mailserver zorgt dat e-mails aankomen. Servers werken door vragen van andere computers te krijgen en daar een antwoord op te geven. Vaak draaien servers dag en nacht en zijn ze snel en betrouwbaar. Tegenwoordig gebruiken veel bedrijven ook virtuele servers. Dat zijn meerdere servers op één computer, zodat het goedkoper en makkelijker is.</p>
+    </div>
+
+    <div class="feature-card">
+        <h3>Medestudent 1</h3>
+        <p>Servers zorgen dat computers en apparaten informatie kunnen delen. Ze geven websites weer, bewaren bestanden en voeren berekeningen uit. Een webserver laat webpagina’s zien. Een database-server bewaart data en geeft die terug als dat nodig is. Er zijn ook DNS-servers die adressen omzetten naar IP-nummers. Servers moeten goed werken en hebben vaak extra onderdelen en back-ups voor veiligheid. Ze zijn belangrijk voor alles wat online gebeurt.</p>
+    </div>
+
+    <div class="feature-card">
+        <h3>Medestudent 2</h3>
+        <p>Servers praten met andere computers via een netwerk. Als een computer iets vraagt, stuurt de server een antwoord terug. Dit gebeurt heel snel. Servers kunnen in een groot gebouw staan of in de cloud. Belangrijk is dat servers betrouwbaar en veilig zijn. Ze worden gecontroleerd en onderhouden zodat ze altijd werken. Zonder servers zouden websites, apps en bestanden niet goed werken.</p>
+    </div>
+
+</section>
+
 </main>
 
 <footer class="site-footer">
     <div class="footer-brand-logo">
-        <img src="https://via.placeholder.com/80" alt="A Site logo placeholder">
-        <p class="brand-name">A Site</p>
+        <img src="" alt="TECHNOVA">
+        <p class="brand-name">MARK</p>
     </div>
     <div class="footer-social-links">
         <a href="#">Telegram</a>
@@ -85,20 +80,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.mobile-menu-toggle-button');
     const primaryNavigation = document.querySelector('#primary-navigation');
-
     menuToggle.addEventListener('click', () => {
         const visibility = primaryNavigation.getAttribute('data-visible') === 'false';
         primaryNavigation.setAttribute('data-visible', visibility);
         menuToggle.setAttribute('aria-expanded', visibility);
-
         const icon = menuToggle.querySelector('i');
-        if (visibility) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
-        } else {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        }
+        if (visibility) { icon.classList.remove('fa-bars'); icon.classList.add('fa-times'); }
+        else { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
     });
 });
 </script>
