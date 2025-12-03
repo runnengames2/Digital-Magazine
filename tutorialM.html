@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>TutorialPagina — A Site</title>
+</head>
+<body>
+<header class="main-header">
+    <div class="header-logo-group">
+        <img src="https://via.placeholder.com/80" alt="A Site logo placeholder">
+        <h1>A Site</h1>
+    </div>
+    <button class="mobile-menu-toggle-button" aria-controls="primary-navigation" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+    </button>
+    <nav class="site-navigation">
+        <ul class="nav-links-list" id="primary-navigation" data-visible="false">
+            <li><a href="nieuwspaginaM.html">Home</a></li>
+            <li><a href="tutorialM.html" aria-current="page">Tutorial</a></li>
+            <li><a href="opinipaginaM.html">Opinie</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="page-content">
+    <section class="hero-section">
+        <div class="hero-image-container">
+            <img src="https://via.placeholder.com/1200x400" alt="Tutorial Hero">
+        </div>
+        <div class="hero-content">
+            <h2>Onderwerp: Variabelen</h2>
+            <p>Leer stap voor stap hoe je variabelen kunt gebruiken in programmeertalen.</p>
+        </div>
+    </section>
+
+    <section class="feature-cards-container">
+        <div class="feature-card">
+            <h3>Wat moet er gebeuren</h3>
+            <ul>
+                <li>Het onderwerp moet bepaald worden</li>
+                <li>Er moet een prompt voor de AI gemaakt worden</li>
+                <li>Het eindresultaat moet minimaal 600 woorden zijn</li>
+                <li>De tutorial moet stap voor stap worden uitgelegd</li>
+            </ul>
+        </div>
+        <div class="feature-card">
+            <h3>De tutorial bevat</h3>
+            <ul>
+                <li>Wat het eindresultaat is</li>
+                <li>Welke stappen er nodig zijn om daar te komen</li>
+                <li>Wat de code doet</li>
+                <li>Waarom die code nodig is</li>
+            </ul>
+        </div>
+        <div class="feature-card">
+            <h3>Dit moet op de TutorialPagina</h3>
+            <ul>
+                <li>De AI prompt</li>
+                <li>De door AI gegenereerde tutorialtekst</li>
+                <li>Eventuele code voorbeelden</li>
+                <li>Korte reflectie wat je zelf hebt geleerd</li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-brand-logo">
+        <img src="https://via.placeholder.com/80" alt="A Site logo placeholder">
+        <p class="brand-name">A Site</p>
+    </div>
+    <div class="footer-social-links">
+        <a href="#">Telegram</a>
+        <a href="#">Whatsapp</a>
+        <a href="#">Youtube</a>
+        <a href="#">Discord</a>
+    </div>
+    <div class="footer-copyright">
+        <p>© 2025 A Site | All Rights Reserved</p>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.mobile-menu-toggle-button');
+    const primaryNavigation = document.querySelector('#primary-navigation');
+
+    menuToggle.addEventListener('click', () => {
+        const visibility = primaryNavigation.getAttribute('data-visible') === 'false';
+        primaryNavigation.setAttribute('data-visible', visibility);
+        menuToggle.setAttribute('aria-expanded', visibility);
+
+        const icon = menuToggle.querySelector('i');
+        if (visibility) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+});
+</script>
+</body>
+</html>

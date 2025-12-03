@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>OpiniePagina — A Site</title>
+</head>
+<body>
+<header class="main-header">
+    <div class="header-logo-group">
+        <img src="https://via.placeholder.com/80" alt="A Site logo placeholder">
+        <h1>A Site</h1>
+    </div>
+    <button class="mobile-menu-toggle-button" aria-controls="primary-navigation" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+    </button>
+    <nav class="site-navigation">
+        <ul class="nav-links-list" id="primary-navigation" data-visible="false">
+            <li><a href="nieuwspaginaM.html">Home</a></li>
+            <li><a href="tutorialM.html">Tutorial</a></li>
+            <li><a href="opinipaginaM.html" aria-current="page">Opinie</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="page-content">
+    <section class="hero-section">
+        <div class="hero-image-container">
+            <img src="https://via.placeholder.com/1200x400" alt="Opinie Hero">
+        </div>
+        <div class="hero-content">
+            <h2>Onderwerp: AI-ethiek</h2>
+            <p>Betogende teksten en eigen opinies over AI binnen onze opleiding.</p>
+        </div>
+    </section>
+
+    <section class="feature-cards-container">
+        <div class="feature-card">
+            <h3>Eigen Tekst</h3>
+            <ul>
+                <li>Een onderwerp dat binnen de opleiding past</li>
+                <li>Een eigen AI-prompt die een overtuigende, goed onderbouwde tekst genereert</li>
+                <li>Onze gebruikte prompt boven de gegenereerde tekst toevoegen</li>
+            </ul>
+        </div>
+        <div class="feature-card">
+            <h3>Wat de tekst moet hebben</h3>
+            <ul>
+                <li>Standpunt</li>
+                <li>Argumenten</li>
+                <li>Eventueel voorbeelden</li>
+                <li>Conclusie bevatten</li>
+            </ul>
+        </div>
+        <div class="feature-card">
+            <h3>Checklist</h3>
+            <ul>
+                <li>1 betogende tekst door AI gegenereerd</li>
+                <li>2 betogende teksten van medestudenten</li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-brand-logo">
+        <img src="https://via.placeholder.com/80" alt="A Site logo placeholder">
+        <p class="brand-name">A Site</p>
+    </div>
+    <div class="footer-social-links">
+        <a href="#">Telegram</a>
+        <a href="#">Whatsapp</a>
+        <a href="#">Youtube</a>
+        <a href="#">Discord</a>
+    </div>
+    <div class="footer-copyright">
+        <p>© 2025 A Site | All Rights Reserved</p>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.mobile-menu-toggle-button');
+    const primaryNavigation = document.querySelector('#primary-navigation');
+
+    menuToggle.addEventListener('click', () => {
+        const visibility = primaryNavigation.getAttribute('data-visible') === 'false';
+        primaryNavigation.setAttribute('data-visible', visibility);
+        menuToggle.setAttribute('aria-expanded', visibility);
+
+        const icon = menuToggle.querySelector('i');
+        if (visibility) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+});
+</script>
+</body>
+</html>
