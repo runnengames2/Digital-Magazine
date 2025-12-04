@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tutorial: Variabelen in Python</title>
 
-    <!-- Link naar de CSS-stylesheet -->
     <link rel="stylesheet" href="style.css">
 
     <meta name="description" content="Tutorial over variabelen in Python voor beginners">
@@ -14,23 +13,18 @@
 
 <body>
 
-    <!-- ================== HEADER ================== -->
     <header class="main-header">
-
-        <!-- Logo en sitenaam -->
         <div class="header-logo-group">
             <img src="https://via.placeholder.com/80" alt="A Site logo placeholder">
             <h1>A Site — Tutorial</h1>
         </div>
 
-        <!-- Knop voor het mobiele menu -->
         <button class="mobile-menu-toggle-button"
                 aria-controls="primary-navigation"
                 aria-expanded="false">
             <span class="menu-icon" aria-hidden="true">☰</span>
         </button>
 
-        <!-- Hoofdnavigatie van de site -->
         <nav class="site-navigation" aria-label="Hoofdnavigatie">
             <ul class="nav-links-list" id="primary-navigation" data-visible="false">
                 <li><a href="index.html">Home</a></li>
@@ -38,34 +32,41 @@
                 <li><a href="opinipagina.html">Opinie</a></li>
             </ul>
         </nav>
-
     </header>
 
 
-    <!-- ================== PAGINA-INHOUD ================== -->
     <main class="page-content" id="maincontent">
 
-        <!-- Grote header-sectie bovenaan de pagina -->
         <section class="hero-section">
-
-            <!-- Achtergrondafbeelding van de hero-sectie -->
             <div class="hero-image-container" aria-hidden="true"></div>
-
-            <!-- Tekst die in de hero staat -->
             <div class="hero-content">
                 <h2>🐍 Tutorial: Variabelen in Python — De Complete Beginnersgids</h2>
-                <p>
-                    Welkom bij deze stap-voor-stap tutorial over variabelen in Python. Deze gids is geschreven voor beginners.
-                </p>
+                <p>Welkom bij deze stap-voor-stap tutorial over variabelen in Python. Deze gids is geschreven voor beginners.</p>
             </div>
-
         </section>
+
+<!-- ================== PROMPTTEKST  ================== -->
+<section class="feature-cards-container" aria-label="Prompt">
+    <article class="feature-card" style="grid-column: 1 / -1;">
+        <h3>📝 Prompt</h3>
+        <p>
+            Maak een tutorial over variabelen in python hoe ze werken en nog wat leuken weetjes. 
+            De tutorial moet stap voor stap zijn en het idee is dat iemand met 0 codeer ervaring 
+            aan het eind van de tutorial snapt wat een variabelen is en variabelen kan maken en 
+            gebruiken in python. De prompt moet minimal 600 woorden bevatten mag meer zijn. 
+            De tutorial moet (ook) bevatten: wat het eindresultaat is. Welke stappen er nodig zijn 
+            om daar te komen. Wat de code doet. Waarom die code nodig is. Deze tutorial moet op een 
+            website komen dus hou dat in gedachten.
+        </p>
+    </article>
+</section>
+<!-- ================== EINDE PROMPTTEKST ================== -->
+
 
 
         <!-- ================== FEATURE CARDS (EERSTE RIJ) ================== -->
         <section class="feature-cards-container" aria-labelledby="eindresultaat">
 
-            <!-- Uitleg wat je aan het einde kunt -->
             <article class="feature-card">
                 <h3 id="eindresultaat">🎯 Eindresultaat</h3>
                 <p>Aan het einde van deze uitleg kun jij:</p>
@@ -77,7 +78,6 @@
                 </ul>
             </article>
 
-            <!-- Uitleg wat een variabele is -->
             <article class="feature-card">
                 <h3 id="wat-is-variabele">🧩 Wat is een variabele?</h3>
                 <p>Een variabele kun je zien als een doosje met een label eraan.</p>
@@ -85,7 +85,6 @@
 leeftijd = 12</code></pre>
             </article>
 
-            <!-- Wat je nodig hebt om te beginnen -->
             <article class="feature-card">
                 <h3>⚙️ Wat heb je nodig?</h3>
                 <p>Je hebt Python nodig of een online editor zoals Replit.</p>
@@ -97,14 +96,12 @@ leeftijd = 12</code></pre>
         <!-- ================== FEATURE CARDS (STAPPEN) ================== -->
         <section class="feature-cards-container" aria-label="Stappen">
 
-            <!-- Stap 1 -->
             <article class="feature-card" id="stap1">
                 <h3>🧭 Stap 1 — Je eerste variabele maken</h3>
                 <pre><code>naam = "Sam"</code></pre>
                 <p>Hier maak je een variabele.</p>
             </article>
 
-            <!-- Stap 2 -->
             <article class="feature-card" id="stap2">
                 <h3>🧭 Stap 2 — Meerdere variabelen maken</h3>
                 <pre><code>naam = "Sam"
@@ -113,7 +110,6 @@ favoriete_kleur = "blauw"</code></pre>
                 <p>Variabelen mogen geen spaties bevatten.</p>
             </article>
 
-            <!-- Stap 3 -->
             <article class="feature-card" id="stap3">
                 <h3>🧭 Stap 3 — Variabelen tonen</h3>
                 <pre><code>print(naam)
@@ -121,7 +117,6 @@ print(leeftijd)</code></pre>
                 <p>Met <code>print()</code> laat je de waarde zien.</p>
             </article>
 
-            <!-- Stap 4 -->
             <article class="feature-card" id="stap4">
                 <h3>🧭 Stap 4 — Variabelen combineren</h3>
                 <pre><code>print("Hallo, ik ben", naam, "en ik ben",
@@ -129,7 +124,6 @@ leeftijd, "jaar oud.")</code></pre>
                 <p>Je kunt tekst combineren met variabelen.</p>
             </article>
 
-            <!-- Stap 5 -->
             <article class="feature-card" id="stap5">
                 <h3>🧭 Stap 5 — Waarde veranderen</h3>
                 <pre><code>score = 0
@@ -140,7 +134,6 @@ print(score)</code></pre>
                 <p>Variabelen kun je opnieuw een waarde geven.</p>
             </article>
 
-            <!-- Stap 6 -->
             <article class="feature-card" id="stap6">
                 <h3>🧮 Stap 6 — Rekenen met variabelen</h3>
                 <pre><code>a = 5
@@ -150,7 +143,6 @@ print(som)</code></pre>
                 <p>Je kunt rekenen met variabelen.</p>
             </article>
 
-            <!-- Mini project -->
             <article class="feature-card" id="mini-project">
                 <h3>🏁 Mini-project: Bouw je eigen profielprogramma</h3>
                 <pre><code>naam = "Alex"
@@ -171,16 +163,12 @@ print("Woonplaats:", woonplaats)</code></pre>
     </main>
 
 
-    <!-- ================== FOOTER ================== -->
     <footer class="site-footer">
-
-        <!-- Logo in footer -->
         <div class="footer-brand-logo">
             <img src="https://via.placeholder.com/80" alt="A Site logo placeholder">
             <div class="brand-name">A Site</div>
         </div>
 
-        <!-- Sociale links -->
         <div class="footer-social-links">
             <a href="#">Telegram</a>
             <a href="#">Whatsapp</a>
@@ -188,39 +176,26 @@ print("Woonplaats:", woonplaats)</code></pre>
             <a href="#">Discord</a>
         </div>
 
-        <!-- Copyright -->
         <div class="footer-copyright">
             <p>© 2025 A Site | All Rights Reserved</p>
         </div>
-
     </footer>
 
-
-    <!-- ================== SCRIPT (mobiel menu werkt) ================== -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
-            // Pakt de menu-knop en navigatie
             const menuToggle = document.querySelector('.mobile-menu-toggle-button');
             const primaryNavigation = document.querySelector('#primary-navigation');
 
-            // Stop als iets niet bestaat
             if (!menuToggle || !primaryNavigation) return;
 
-            // Klik-event voor mobiel menu
             menuToggle.addEventListener('click', () => {
-
-                // Controleren of menu zichtbaar is
                 const isHidden = primaryNavigation.getAttribute('data-visible') === 'false';
-
-                // Waarde omdraaien
                 const newValue = isHidden ? 'true' : 'false';
 
-                // Nieuwe waarden instellen
                 primaryNavigation.setAttribute('data-visible', newValue);
                 menuToggle.setAttribute('aria-expanded', newValue);
 
-                // Verander het icoon (☰ ↔ ×)
                 const icon = menuToggle.querySelector('.menu-icon');
                 if (icon) icon.textContent = isHidden ? '×' : '☰';
             });
