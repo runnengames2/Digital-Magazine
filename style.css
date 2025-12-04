@@ -8,13 +8,18 @@
     padding: 0;
 }
 
+/* ⬅️ THE FIX: Apply overflow-x: hidden to both html and body for universal scroll prevention. */
+html,
+body {
+    overflow-x: hidden;
+}
+
 body {
     /* Sets the site's primary font, dark background, and light text color */
     font-family: 'Orbitron', sans-serif;
     background-color: #0d0d0d;
     color: #fff;
-    /* Prevents horizontal scrollbar issues */
-    overflow-x: hidden;
+    /* The old 'overflow-x: hidden;' is now covered by the html, body selector above */
     /* Ensures the body takes up at least the full viewport height */
     min-height: 100vh;
     /* Flex setup to push the footer to the bottom */
@@ -25,9 +30,34 @@ body {
 .page-content {
     /* Allows the main content to take up available vertical space */
     flex-grow: 1;
+    /* FIX: Set a max-width for better readability on large screens and center the container */
+    max-width: 75rem;
+    /* 1200px */
+    margin: 0 auto;
     /* Spacing around the main content (50px -> 3.125rem, 20px -> 1.25rem) */
     padding: 3.125rem 1.25rem;
+}
+
+/* MODIFICATION: Change article/section alignment from left to center */
+.page-content article,
+.page-content section {
     text-align: center;
+    /* Changed from left to center */
+}
+
+/* MODIFICATION: Overrides to keep specific elements, like list items and blockquotes, readable */
+.page-content article p,
+.page-content article ul,
+.page-content article blockquote,
+.page-content article pre {
+    /* Ensures standard text/blocks align left for readability, even if the parent container is centered */
+    text-align: left;
+    /* MODIFICATION: Center-align these blocks themselves within their container */
+    margin-left: auto;
+    margin-right: auto;
+    /* Gives a max-width to paragraphs for better centered readability */
+    max-width: 45rem;
+    /* 720px */
 }
 
 /* ==================================== */
@@ -145,6 +175,61 @@ body {
     border-radius: 0.25rem;
     /* 4px */
     background-color: rgba(0, 170, 255, 0.1);
+}
+
+/* --- New Dropdown/Submenu Styles --- */
+
+.submenu {
+    list-style: none;
+    /* Initially hidden for desktop. Shown on hover (see below) */
+    display: none;
+    position: absolute;
+    /* Positions it right below the parent link */
+    top: 100%;
+    left: 0;
+    /* Neon style for the dropdown background */
+    background-color: #00001a;
+    border: 0.0625rem solid #00aaff;
+    /* 1px */
+    border-top: none;
+    padding: 0.625rem 0;
+    /* 10px 0 */
+    min-width: 10rem;
+    /* 160px */
+    z-index: 999;
+    border-radius: 0 0 0.25rem 0.25rem;
+    /* Rounded bottom corners */
+    box-shadow: 0 0.625rem 1.25rem rgba(0, 170, 255, 0.4);
+    /* 10px 20px */
+}
+
+.submenu li a {
+    display: block;
+    padding: 0.625rem 1.25rem;
+    /* 10px 20px */
+    text-decoration: none;
+    color: #f0f0f0;
+    font-weight: 400;
+    transition: background-color 0.3s, color 0.3s;
+    white-space: nowrap;
+}
+
+.submenu li a:hover {
+    background-color: rgba(0, 170, 255, 0.15);
+    color: #00aaff;
+    text-shadow: 0 0 0.3125rem #00aaff;
+    /* 5px */
+}
+
+/* Show submenu on desktop hover/focus (This handles the closing on hover off) */
+.nav-links-list>li:hover .submenu,
+.nav-links-list>li:focus-within .submenu {
+    display: block;
+}
+
+/* If the main link now triggers a dropdown, remove the border radius from the bottom for the hover effect */
+.nav-links-list>li:hover>a {
+    border-radius: 0.25rem 0.25rem 0 0;
 }
 
 /* ==================================== */
@@ -327,27 +412,258 @@ body {
     font-size: 0.95rem;
     color: #aaa;
     line-height: 1.5;
+    /* MODIFICATION: Overridden above to align left inside the card */
 }
 
 
 /* ==================================== */
-/* 5. Media Queries (Responsiveness) */
+/* 5. Tutorial & Article-Related Styles */
+/* ==================================== */
+/* Tutorial Steps Container (New block for tutorial content) */
+.tutorial-steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    /* 20px */
+    padding: 1.25rem 0;
+    /* 20px 0 */
+}
+
+/* Neon style for the whole step container */
+.tutorial-step {
+    border: 0.125rem solid #00f0ff;
+    /* 2px - Neon Cyan border */
+    border-radius: 0.5rem;
+    /* 8px */
+    padding: 0.9375rem;
+    /* 15px */
+    background-color: #1a1a2e;
+    /* Dark Purple/Blue background */
+    box-shadow: 0 0 0.625rem #00f0ff;
+    /* 10px */
+    display: flex;
+    align-items: flex-start;
+    gap: 0.9375rem;
+    /* 15px */
+    color: #d1f7ff;
+    /* Light, bright text color */
+    /* MODIFICATION: Center the step block itself */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 45rem;
+    /* Same as p/ul/etc for consistency */
+    width: 100%;
+}
+
+/* The step-number class is now unused in HTML - keeping the styles just in case it's added back. */
+.step-number {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ff33cc;
+    text-shadow: 0 0 0.3125rem #ff33cc;
+    /* 5px */
+    min-width: 1.875rem;
+    /* 30px */
+    text-align: center;
+    background-color: #330033;
+    border-radius: 50%;
+    padding: 0.3125rem;
+    /* 5px */
+    line-height: 1;
+}
+
+.step-content {
+    /* MODIFICATION: Override to left-align the content inside the tutorial step */
+    text-align: left;
+    width: 100%;
+    /* Ensure it uses the full space */
+}
+
+.step-content h3 {
+    margin-top: 0;
+    color: #00ff99;
+    /* Neon Green/Aqua for headers */
+    text-shadow: 0 0 0.1875rem #00ff99;
+    /* 3px */
+}
+
+.step-content p,
+.step-content li {
+    margin-bottom: 0.3125rem;
+    /* 5px */
+    color: #d1f7ff;
+    /* Consistent light text */
+    /* MODIFICATION: Set list text back to left-aligned if it was affected by parent */
+    text-align: left;
+}
+
+/* Styling for code blocks within the lesson */
+.step-content pre {
+    background-color: #0a0a1a;
+    /* Very dark background for code */
+    padding: 0.625rem;
+    /* 10px */
+    border-radius: 0.25rem;
+    /* 4px */
+    overflow-x: auto;
+    font-family: monospace;
+    white-space: pre-wrap;
+    color: #ffcc66;
+    /* Bright amber color for code text */
+    border: 0.0625rem solid #ffcc66;
+    /* 1px */
+    /* MODIFICATION: Remove max-width/auto margins added globally for pre in tutorial steps */
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Article Image Responsiveness */
+/* Ensures the image is never wider than its container and scales down. */
+.article-image-container img {
+    max-width: 100%;
+    height: auto;
+    /* Maintains aspect ratio */
+    display: block;
+    /* Removes extra space below the image */
+    /* MODIFICATION: Center the image within its container */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ensures the container respects page flow */
+.article-image-container {
+    overflow: hidden;
+}
+
+/* Optional style for the introduction to make it stand out */
+.article-intro {
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    /* 20px */
+    padding: 0 0.625rem;
+    /* 0 10px */
+    /* MODIFICATION: Re-center the intro paragraph */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* FIX: Ensure list is perfectly flush left */
+.no-style-list {
+    list-style-type: none;
+    /* Removes bullets/numbers */
+    padding-left: 0;
+    /* Removes default indentation */
+    margin-left: auto;
+    /* Changed from 0 to auto to center it */
+    margin-right: auto;
+    /* Added to center it */
+    /* Ensures list aligns with paragraph text across all browsers */
+    margin-top: 0.625rem;
+    /* 10px */
+    /* MODIFICATION: The global p/ul/etc alignment handles text-align: left, but if it didn't, we'd add it here */
+}
+
+.main-tutorial-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    /* 8px */
+    margin-bottom: 1.25rem;
+    /* 20px */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    /* 4px 8px */
+}
+
+/* Article Opinion Card Styles (Keeping the original styling for these new elements) */
+.opinie-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+    /* 30px */
+    padding: 1.25rem 0;
+    /* 20px 0 */
+    /* MODIFICATION: Center the opinion container block itself */
+    align-items: center;
+    /* Center flex items */
+}
+
+.opinie-card {
+    border: 0.125rem solid #00ff99;
+    /* 2px - Neon Green/Aqua border */
+    border-radius: 0.625rem;
+    /* 10px */
+    padding: 1.25rem;
+    /* 20px */
+    background-color: #1a1a2e;
+    /* Dark Purple/Blue background */
+    box-shadow: 0 0 0.625rem #00ff99;
+    /* 10px */
+    color: #d1f7ff;
+    /* Light, bright text color */
+    /* MODIFICATION: Give the card a max width for centering in flex layout */
+    max-width: 45rem;
+    width: 100%;
+    /* MODIFICATION: Inherits text-align: center from parent article/section */
+}
+
+.opinie-card header {
+    margin-bottom: 0.9375rem;
+    /* 15px */
+    padding-bottom: 0.625rem;
+    /* 10px */
+    border-bottom: 0.0625rem solid rgba(0, 255, 153, 0.3);
+    /* 1px - Light separator */
+}
+
+.opinie-card h2 {
+    margin-top: 0;
+    color: #00f0ff;
+    /* Neon Cyan for headers */
+    text-shadow: 0 0 0.1875rem #00f0ff;
+    /* 3px */
+}
+
+.opinie-card .auteur-meta {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #ff33cc;
+    /* Pink/Magenta for author info */
+}
+
+.opinie-card p {
+    line-height: 1.6;
+    margin-bottom: 0.9375rem;
+    /* 15px */
+    /* MODIFICATION: Overridden globally to align left inside the card */
+}
+
+.opinie-card blockquote {
+    border-left: 0.3125rem solid #ffcc66;
+    /* 5px - Amber for quotes */
+    padding-left: 0.9375rem;
+    /* 15px */
+    margin: 0.9375rem auto;
+    /* 15px 0 -> 15px auto to center it. */
+    font-style: italic;
+    color: #ffcc66;
+    /* MODIFICATION: Overridden globally to align left inside the card */
+}
+
+/* ==================================== */
+/* 6. Media Queries (Responsiveness) */
 /* ==================================== */
 
-/* Tablet/Small Desktop adjustments */
+/* Tablet/Small Desktop adjustments (Max-width 1200px / 75rem) */
 @media (max-width: 75rem) {
-
-    /* 1200px */
     .main-header {
         padding: 0.75rem 1.25rem;
         /* 12px 20px */
     }
 }
 
-/* Mobile adjustments */
+/* Mobile adjustments (Max-width 768px / 48rem) */
 @media (max-width: 48rem) {
-    /* 768px */
-
     .mobile-menu-toggle-button {
         display: block;
         margin-left: auto;
@@ -364,8 +680,9 @@ body {
     .nav-links-list {
         /* Mobile menu becomes an off-canvas sidebar */
         position: fixed;
+        /* NOTE: Ensure the header height is constant or adjust this `top` value dynamically. */
         top: 4.75rem;
-        /* 76px - Height of the header */
+        /* 76px - Estimated Height of the header */
         right: 0;
         /* Fills the rest of the viewport height */
         height: calc(100vh - 4.75rem);
@@ -408,6 +725,37 @@ body {
 
     .nav-links-list>li:hover>a {
         background-color: rgba(0, 170, 255, 0.2);
+    }
+
+    /* --- Mobile Submenu Adjustment --- */
+    .submenu {
+        /* Reset for mobile: should stack below the parent link */
+        position: static;
+        width: 100%;
+        /* Full width of the parent LI */
+        padding: 0;
+        /* Remove vertical padding */
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: #00000a;
+        /* Slightly darker background for contrast */
+    }
+
+    .submenu li a {
+        /* Make links slightly indented */
+        padding: 0.625rem 1.25rem 0.625rem 2.5rem;
+        /* 10px 20px 10px 40px */
+        font-size: 0.9rem;
+    }
+
+    .submenu li a:hover {
+        background-color: rgba(0, 170, 255, 0.1);
+    }
+
+    /* Since we're not using JS to toggle submenus, we'll keep the list visible on mobile */
+    .nav-links-list>li .submenu {
+        display: block;
     }
 
     /* Hero adjustments */
