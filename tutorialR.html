@@ -5,22 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tutorial: Variabelen in Python</title>
+
+    <!-- Link naar de CSS-stylesheet -->
     <link rel="stylesheet" href="style.css">
+
     <meta name="description" content="Tutorial over variabelen in Python voor beginners">
 </head>
 
 <body>
 
+    <!-- ================== HEADER ================== -->
     <header class="main-header">
+
+        <!-- Logo en sitenaam -->
         <div class="header-logo-group">
             <img src="https://via.placeholder.com/80" alt="A Site logo placeholder">
             <h1>A Site — Tutorial</h1>
         </div>
 
-        <button class="mobile-menu-toggle-button" aria-controls="primary-navigation" aria-expanded="false">
+        <!-- Knop voor het mobiele menu -->
+        <button class="mobile-menu-toggle-button"
+                aria-controls="primary-navigation"
+                aria-expanded="false">
             <span class="menu-icon" aria-hidden="true">☰</span>
         </button>
 
+        <!-- Hoofdnavigatie van de site -->
         <nav class="site-navigation" aria-label="Hoofdnavigatie">
             <ul class="nav-links-list" id="primary-navigation" data-visible="false">
                 <li><a href="index.html">Home</a></li>
@@ -28,24 +38,34 @@
                 <li><a href="opinipagina.html">Opinie</a></li>
             </ul>
         </nav>
+
     </header>
 
+
+    <!-- ================== PAGINA-INHOUD ================== -->
     <main class="page-content" id="maincontent">
 
+        <!-- Grote header-sectie bovenaan de pagina -->
         <section class="hero-section">
+
+            <!-- Achtergrondafbeelding van de hero-sectie -->
             <div class="hero-image-container" aria-hidden="true"></div>
+
+            <!-- Tekst die in de hero staat -->
             <div class="hero-content">
                 <h2>🐍 Tutorial: Variabelen in Python — De Complete Beginnersgids</h2>
                 <p>
-                    Welkom bij deze stap-voor-stap tutorial over variabelen in Python. Deze gids is speciaal
-                    geschreven voor absolute beginners en geschikt om op een website te publiceren. Je hebt
-                    geen programmeerervaring nodig. We beginnen bij nul en eindigen met jouw eerste werkende
-                    Python-programma met variabelen.
+                    Welkom bij deze stap-voor-stap tutorial over variabelen in Python. Deze gids is geschreven voor beginners.
                 </p>
             </div>
+
         </section>
 
+
+        <!-- ================== FEATURE CARDS (EERSTE RIJ) ================== -->
         <section class="feature-cards-container" aria-labelledby="eindresultaat">
+
+            <!-- Uitleg wat je aan het einde kunt -->
             <article class="feature-card">
                 <h3 id="eindresultaat">🎯 Eindresultaat</h3>
                 <p>Aan het einde van deze uitleg kun jij:</p>
@@ -57,68 +77,81 @@
                 </ul>
             </article>
 
+            <!-- Uitleg wat een variabele is -->
             <article class="feature-card">
                 <h3 id="wat-is-variabele">🧩 Wat is een variabele?</h3>
-                <p>Een variabele kun je zien als een doosje met een label eraan: de naam is het label, de inhoud is de waarde.</p>
+                <p>Een variabele kun je zien als een doosje met een label eraan.</p>
                 <pre><code>naam = "Sam"
 leeftijd = 12</code></pre>
             </article>
 
+            <!-- Wat je nodig hebt om te beginnen -->
             <article class="feature-card">
                 <h3>⚙️ Wat heb je nodig?</h3>
-                <p>Je hebt Python op je computer, of een online editor zoals Replit of Google Colab.</p>
+                <p>Je hebt Python nodig of een online editor zoals Replit.</p>
             </article>
+
         </section>
 
+
+        <!-- ================== FEATURE CARDS (STAPPEN) ================== -->
         <section class="feature-cards-container" aria-label="Stappen">
-            <article class="feature-card" id="stap1" aria-labelledby="stap1-heading">
-                <h3 id="stap1-heading">🧭 Stap 1 — Je eerste variabele maken</h3>
+
+            <!-- Stap 1 -->
+            <article class="feature-card" id="stap1">
+                <h3>🧭 Stap 1 — Je eerste variabele maken</h3>
                 <pre><code>naam = "Sam"</code></pre>
-                <p>Je maakt een variabele genaamd <code>naam</code> en stopt er de tekst <code>"Sam"</code> in.</p>
+                <p>Hier maak je een variabele.</p>
             </article>
 
-            <article class="feature-card" id="stap2" aria-labelledby="stap2-heading">
-                <h3 id="stap2-heading">🧭 Stap 2 — Meerdere variabelen maken</h3>
+            <!-- Stap 2 -->
+            <article class="feature-card" id="stap2">
+                <h3>🧭 Stap 2 — Meerdere variabelen maken</h3>
                 <pre><code>naam = "Sam"
 leeftijd = 12
 favoriete_kleur = "blauw"</code></pre>
-                <p>Variabelen mogen geen spaties bevatten; gebruik underscores. Begin niet met een cijfer.</p>
+                <p>Variabelen mogen geen spaties bevatten.</p>
             </article>
 
-            <article class="feature-card" id="stap3" aria-labelledby="stap3-heading">
-                <h3 id="stap3-heading">🧭 Stap 3 — Variabelen tonen</h3>
+            <!-- Stap 3 -->
+            <article class="feature-card" id="stap3">
+                <h3>🧭 Stap 3 — Variabelen tonen</h3>
                 <pre><code>print(naam)
 print(leeftijd)</code></pre>
-                <p>Gebruik <code>print()</code> om waarden zichtbaar te maken voor de gebruiker.</p>
+                <p>Met <code>print()</code> laat je de waarde zien.</p>
             </article>
 
-            <article class="feature-card" id="stap4" aria-labelledby="stap4-heading">
-                <h3 id="stap4-heading">🧭 Stap 4 — Variabelen combineren</h3>
-                <pre><code>print("Hallo, ik ben", <br>naam, "en ik ben", leeftijd, "jaar oud.")</code></pre>
-                <p>Combineer tekst en variabelen in één regel met <code>print()</code>.</p>
+            <!-- Stap 4 -->
+            <article class="feature-card" id="stap4">
+                <h3>🧭 Stap 4 — Variabelen combineren</h3>
+                <pre><code>print("Hallo, ik ben", naam, "en ik ben", leeftijd, "jaar oud.")</code></pre>
+                <p>Je kunt tekst combineren met variabelen.</p>
             </article>
 
-            <article class="feature-card" id="stap5" aria-labelledby="stap5-heading">
-                <h3 id="stap5-heading">🧭 Stap 5 — Waarde veranderen</h3>
+            <!-- Stap 5 -->
+            <article class="feature-card" id="stap5">
+                <h3>🧭 Stap 5 — Waarde veranderen</h3>
                 <pre><code>score = 0
 print(score)
 
 score = 10
 print(score)</code></pre>
-                <p>Variabelen zijn veranderlijk — je kunt ze opnieuw toewijzen tijdens de uitvoering.</p>
+                <p>Variabelen kun je opnieuw een waarde geven.</p>
             </article>
 
-            <article class="feature-card" id="stap6" aria-labelledby="stap6-heading">
-                <h3 id="stap6-heading">🧮 Stap 6 — Rekenen met variabelen</h3>
+            <!-- Stap 6 -->
+            <article class="feature-card" id="stap6">
+                <h3>🧮 Stap 6 — Rekenen met variabelen</h3>
                 <pre><code>a = 5
 b = 3
 som = a + b
 print(som)</code></pre>
-                <p>Je kunt rekenkundige bewerkingen uitvoeren en het resultaat in variabelen bewaren.</p>
+                <p>Je kunt rekenen met variabelen.</p>
             </article>
 
-            <article class="feature-card" id="mini-project" aria-labelledby="mini-project-heading">
-                <h3 id="mini-project-heading">🏁 Mini-project: Bouw je eigen profielprogramma</h3>
+            <!-- Mini project -->
+            <article class="feature-card" id="mini-project">
+                <h3>🏁 Mini-project: Bouw je eigen profielprogramma</h3>
                 <pre><code>naam = "Alex"
 leeftijd = 14
 hobby = "gamen"
@@ -129,44 +162,66 @@ print("Naam:", naam)
 print("Leeftijd:", leeftijd)
 print("Hobby:", hobby)
 print("Woonplaats:", woonplaats)</code></pre>
-                <p>Samenvoegen van eerdere stappen tot een klein programma dat informatie toont.</p>
+                <p>Hier combineer je alles wat je hebt geleerd.</p>
             </article>
+
         </section>
 
     </main>
 
+
+    <!-- ================== FOOTER ================== -->
     <footer class="site-footer">
+
+        <!-- Logo in footer -->
         <div class="footer-brand-logo">
             <img src="https://via.placeholder.com/80" alt="A Site logo placeholder">
             <div class="brand-name">A Site</div>
         </div>
+
+        <!-- Sociale links -->
         <div class="footer-social-links">
             <a href="#">Telegram</a>
             <a href="#">Whatsapp</a>
             <a href="#">Youtube</a>
             <a href="#">Discord</a>
         </div>
+
+        <!-- Copyright -->
         <div class="footer-copyright">
             <p>© 2025 A Site | All Rights Reserved</p>
         </div>
+
     </footer>
 
+
+    <!-- ================== SCRIPT (mobiel menu werkt) ================== -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+
+            // Pakt de menu-knop en navigatie
             const menuToggle = document.querySelector('.mobile-menu-toggle-button');
             const primaryNavigation = document.querySelector('#primary-navigation');
 
+            // Stop als iets niet bestaat
             if (!menuToggle || !primaryNavigation) return;
 
+            // Klik-event voor mobiel menu
             menuToggle.addEventListener('click', () => {
-                const currentlyHidden = primaryNavigation.getAttribute('data-visible') === 'false';
-                const newValue = currentlyHidden ? 'true' : 'false';
 
+                // Controleren of menu zichtbaar is
+                const isHidden = primaryNavigation.getAttribute('data-visible') === 'false';
+
+                // Waarde omdraaien
+                const newValue = isHidden ? 'true' : 'false';
+
+                // Nieuwe waarden instellen
                 primaryNavigation.setAttribute('data-visible', newValue);
                 menuToggle.setAttribute('aria-expanded', newValue);
 
+                // Verander het icoon (☰ ↔ ×)
                 const icon = menuToggle.querySelector('.menu-icon');
-                if (icon) icon.textContent = currentlyHidden ? '×' : '☰';
+                if (icon) icon.textContent = isHidden ? '×' : '☰';
             });
         });
     </script>
