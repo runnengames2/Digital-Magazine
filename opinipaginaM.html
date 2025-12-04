@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>Opinie - Mark</title>
+</head>
+<body>
+<header class="main-header">
+    <div class="header-logo-group">
+        <img src="" alt="TECHNOVA">
+        <h1>Mark</h1>
+    </div>
+    <button class="mobile-menu-toggle-button" aria-controls="primary-navigation" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+    </button>
+    <nav class="site-navigation">
+        <ul class="nav-links-list" id="primary-navigation" data-visible="false">
+            <li><a href="nieuwspaginaM.html">Home</a></li>
+            <li><a href="tutorialM.html">Tutorial</a></li>
+            <li><a href="opinipaginaM.html" aria-current="page">Opinie</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="page-content">
+    <section class="hero-section">
+        <div class="hero-image-container">
+            <img src="https://via.placeholder.com/1200x400" alt="Opinie over automatisering">
+        </div>
+        <div class="hero-content">
+            <h2>Opinie: Automatisering in Softwareontwikkeling</h2>
+            <p>Deze pagina bevat drie betogende teksten over automatisering in softwareontwikkeling. De eerste is AI-gegenereerd, de andere twee zijn geschreven door 2 verschillende medestudenten. Iedere tekst bevat een standpunt, argumenten, voorbeelden en een conclusie zoals in het boekje omschreven is.</p>
+        </div>
+    </section>
+
+    <section class="feature-cards-container">
+
+    <div class="feature-card">
+        <h3>Mijn AI-tekst</h3>
+        <p><strong>Prompt:</strong> "Schrijf een korte tekst over automatisering. Leg uit waarom automatisering goed of slecht kan zijn. Gebruik makkelijke woorden en geef argumenten en een conclusie."</p>
+        <p><strong>Tekst:</strong><br>
+        Automatisering betekent dat machines werk doen dat mensen vroeger deden. Dit kan handig zijn, omdat het sneller gaat en fouten vermindert. Bijvoorbeeld in fabrieken of bij computers. Aan de andere kant kan automatisering banen overnemen, waardoor mensen hun werk verliezen. Een goed voorbeeld is een fabriek waar robots producten maken. Het is sneller en goedkoper, maar sommige mensen verliezen hun baan. Mijn conclusie is dat automatisering goed kan zijn als we het slim gebruiken en mensen helpen om nieuwe vaardigheden te leren.</p>
+    </div>
+
+    <div class="feature-card">
+        <h3>Medestudent 1</h3>
+        <p>Automatisering helpt bedrijven sneller te werken. Machines en computers doen het werk van mensen. Dat is handig omdat er minder fouten zijn en alles sneller klaar is. Maar sommige banen verdwijnen. Mensen moeten nieuwe dingen leren om werk te houden. Automatisering kan dus goed zijn, maar het moet slim gebeuren.</p>
+    </div>
+
+    <div class="feature-card">
+        <h3>Medestudent 2</h3>
+        <p>Met automatisering kunnen computers en machines taken overnemen. Bijvoorbeeld automatische kassasystemen of robots in fabrieken. Het maakt werk makkelijker en sneller. Toch kan het lastig zijn voor mensen die hun werk verliezen. Het is belangrijk dat automatisering mensen helpt en niet vervangt zonder oplossingen. Uiteindelijk kan automatisering goed werken als we er verstandig mee omgaan.</p>
+    </div>
+
+</section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-brand-logo">
+        <img src="" alt="TECHNOVA">
+        <p class="brand-name">MARK</p>
+    </div>
+    <div class="footer-social-links">
+        <a href="#">Telegram</a>
+        <a href="nieuwspaginaM.html">Mark</a>
+        <a href="nieuwsR.html">Ruben</a>
+        <a href="#">Discord</a>
+    </div>
+    <div class="footer-copyright">
+        <p>© 2025 A Site | All Rights Reserved</p>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.mobile-menu-toggle-button');
+    const primaryNavigation = document.querySelector('#primary-navigation');
+    menuToggle.addEventListener('click', () => {
+        const visibility = primaryNavigation.getAttribute('data-visible') === 'false';
+        primaryNavigation.setAttribute('data-visible', visibility);
+        menuToggle.setAttribute('aria-expanded', visibility);
+        const icon = menuToggle.querySelector('i');
+        if (visibility) { icon.classList.remove('fa-bars'); icon.classList.add('fa-times'); }
+        else { icon.classList.remove('fa-times'); icon.classList.add('fa-bars'); }
+    });
+});
+</script>
+</body>
+</html>
